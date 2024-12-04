@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Contenedor principal */
+.container {
+  @apply max-w-md mx-auto p-4 bg-white shadow-md rounded-md;
+}
+/* Header */
+.header {
+  @apply flex justify-between items-center mb-2;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10px; /* Ajusta este valor para mover la línea hacia abajo */
+}
+.logo {
+  @apply h-8;
+}
+.menu-button {
+  @apply text-gray-600 text-xl;
+}
+/* Imagen principal */
+.image-section {
+  @apply mb-2 py-5;
+}
+
+.main-image {
+  @apply w-10/12 h-40 bg-gray-100 flex items-center justify-center rounded-md border border-gray-300 mx-auto;
+}
+
+.icon {
+  @apply text-gray-400;
+}
+.image-grid {
+  @apply mt-2 grid grid-cols-4 gap-2;
+}
+.image-box {
+  @apply w-16 h-16 bg-gray-100 flex items-center justify-center rounded-md border border-gray-300;
+}
+/* Descripción */
+.form-group {
+  @apply mb-4;
+}
+.textarea {
+  @apply w-full h-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-orange-300;
+}
+/* Horarios */
+.label-hora {
+  @apply block text-gray-600 text-sm mb-2 font-bold; /* Alineamos el label como los demás títulos */
+}
+
+.time-selection {
+  @apply flex items-center justify-center gap-4; /* Flexbox para alinear los inputs de tiempo y el botón */
+}
+
+
+.time-input {
+  @apply w-24 p-2 text-center border rounded-md; /* Ajustamos el tamaño del input */
+}
+
+.add-availability-button {
+  @apply w-1/2 sm:w-3/4 md:w-3/4 lg:w-[250px] py-2 px-4 flex items-center justify-center mb-4 text-white bg-orange-500 hover:bg-orange-400 rounded-md shadow-md transition duration-300 ease-in-out mr-2; /* Añadido margin-right */
+}
+
+
+
+/* Botón Añadir */
+.button-container {
+  @apply mt-4;
+}
+.submit-button {
+  @apply w-10/12 sm:w-3/4 md:w-1/2 lg:w-[300px] py-2 flex items-center justify-center bg-primary text-white rounded-md hover:bg-orange-600 transition duration-300 ease-in-out transform hover:scale-105 mx-auto;
+}
+
+/* Inputs */
+.input {
+  @apply w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-orange-300;
+}
+
+
+/* Otros estilos */
+.add-availability-button {
+  @apply mt-4 px-2 py-2 text-white flex items-center justify-center bg-primary hover:bg-orange-200 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105;
+}
+/* Precio */
+.price-input {
+  @apply flex items-center;
+}
+.currency {
+  @apply px-3 py-2 bg-gray-100 border border-gray-300 rounded-l-md;
+}
+.price-field {
+  @apply w-full rounded-r-md;
+}
+/* Title */
+.titulo {
+  @apply block text-black text-sm mb-2;
+}
+.label-1 {
+  @apply block text-black text-sm mb-2 px-2 font-bold;
+}
+.label {
+  @apply block text-black text-sm mb-2 px-2;
+}
+.label-hora {
+  @apply block text-black text-sm mb-2 px-2;
+}
+.title {
+  @apply block text-black text-sm mb-2;
+}
+.label-rango {
+  @apply text-black text-sm mb-2 font-bold;
+}
+/* Description */
+/* Estilo para el campo de texto */
+.titulo-input {
+  @apply block w-full p-3 border border-gray-300 rounded-lg;
+  font-size: 14px;
+  box-sizing: border-box; /* Asegura que el padding y el borde no se sumen al tamaño del textarea */
+  resize: none; /* Deshabilita el redimensionamiento manual */
+  min-height: 15px; /* Altura mínima para que sea legible */
+  overflow-y: hidden; /* Elimina las barras de desplazamiento vertical */
+}
+
+/* Estilo para el contenedor de contenido */
+.content {
+  @apply bg-white rounded-lg p-2; /* Cuadro con fondo blanco, borde y padding */
+  position: relative; /* Para que el cuadro se quede fijo */
+  overflow: hidden; /* Para que no se desborde el contenido si es demasiado largo */
+}
+.description-input {
+  @apply w-full p-3 border border-gray-300 rounded-lg resize-none;
+  font-size: 14px;
+  overflow: hidden; /* Para evitar scroll visible mientras se expande */
+  min-height: 50px; /* Altura inicial mínima */
+  transition: height 0.2s ease; /* Suaviza el cambio de altura */
+}
+
+/*Tags */
+/* Contenedor de las etiquetas */
+.tags-select{
+  @apply w-1/2  bg-orange-100 border rounded-md px-4 py-2 text-xs ;
+}
+
+.tags-list {
+  @apply flex flex-wrap  gap-0; /* Espacio entre las etiquetas */
+  margin-top: 20px; /* Ajuste del margen superior */
+}
+
+/* Estilo de las etiquetas */
+.tag{
+  @apply bg-primary text-white px-4 py-2 rounded-full text-sm mr-3 mb-3; /* Color de fondo naranja y píldora */
+}
+
+/* Estilo de la "X" */
+.remove-tag{
+  @apply ml-3 text-white cursor-pointer hover:text-gray-300;
+  font-size: 14px;
+  padding: 2;
+  margin-left: 0.25rem; /* Espacio entre la etiqueta y la "X" */
+}
+
+/* Responsive para las tags */
+@media (max-width: 640px) {
+  .tag-item {
+    font-size: 12px; /* Tamaño más pequeño en pantallas pequeñas */
+    padding: 0.5rem;
+  }
+}
+
+/* Estilos de la "X" en las etiquetas */
+.remove-tag-button svg {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+/* Estilo de la "X" */
+.remove-tag-button:hover {
+  color: #eaeaea;
+}
+
+
+
+
+/* ================================================================= */
+/*  Responsive Design */
+
+.date-picker {
+  @apply flex justify-center mb-2 py-2;
+}
+.react-datepicker {
+  @apply border-none font-sans;
+}
+.react-datepicker__header {
+  @apply bg-transparent border-b-0;
+}
+.react-datepicker__day-name,
+.react-datepicker__day {
+  @apply m-0 p-1 w-10 h-10 rounded-none text-center;
+}
+.react-datepicker__day:hover:not([aria-disabled="true"]) {
+  @apply bg-orange-500 rounded-none text-white;
+}
+.react-datepicker__day--selected,
+.react-datepicker__day--selected:hover:not([aria-disabled="true"]) {
+  @apply bg-orange-500 text-white;
+}
+.react-datepicker__day--range-start,
+.react-datepicker__day--in-selecting-range.react-datepicker__day--selecting-range-start {
+  @apply rounded-l-full bg-orange-500 text-white;
+}
+.react-datepicker__day--range-end {
+  @apply bg-orange-500 text-white rounded-r-full;
+}
+.react-datepicker__day--in-selecting-range:not(
+    .react-datepicker__day--in-range,
+    .react-datepicker__day--selecting-range-start
+  ) {
+  @apply bg-orange-200 text-black;
+}
+.react-datepicker__day--in-range:not(
+    .react-datepicker__day--range-start,
+    .react-datepicker__day--range-end
+  ) {
+  @apply bg-orange-200 text-black;
+}
+/* Buttons Guardar Disponibilidad */
+.add-availability-button {
+  @apply mt-4 px-2 py-2 text-white bg-primary hover:bg-orange-200 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105;
+}
